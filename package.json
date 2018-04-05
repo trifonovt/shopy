@@ -37,11 +37,8 @@
     "@storybook/angular": "^3.4.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
-<<<<<<< HEAD
     "angular-cli": "1.0.0-beta.28.3",
     "babel-core": "^6.26.0",
-=======
->>>>>>> 8e77565bceb61c370d0a8a188373e2ac2bacb2af
     "codelyzer": "~2.0.0-beta.1",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
