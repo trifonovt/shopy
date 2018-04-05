@@ -1,24 +1,30 @@
+// Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { ButtonModule } from 'primeng/button';
 
+// Project Modules
+import { SharedComponentsModule } from 'app/shared-components/shared.components.module';
+
+// Components
 import { AppComponent } from './app.component';
-import { ShopyHeaderComponent } from './components/shopy-header/shopy-header.component';
-import { AppButtonComponent } from './components/app-button/app-button.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { CartComponent } from './cart/cart.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopyHeaderComponent,
-    AppButtonComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ButtonModule
+    SharedComponentsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
