@@ -4,7 +4,8 @@
 
 <ng-container [ngSwitch]="typeOfButton">
     <ng-container *ngSwitchCase="'iconText'">
-
+        <i class="{{faClass}}"></i>
+        <button [type]="type" class="app-button {{className}}" [disabled]="disabled" (click)="handleClick($event)">{{label}}</button>
     </ng-container>
     <ng-container *ngSwitchCase="'icon'">
         <i class="fas fa-camera-retro app-icon-button" (click)="handleClick($event)">{{label}}</i>

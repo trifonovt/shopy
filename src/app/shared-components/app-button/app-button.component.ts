@@ -11,8 +11,9 @@ export class AppButtonComponent {
   @Input('type') public type? = 'button';
   @Input('className') public className? = '';
   @Input('disabled') public disabled? = false;
-  @Output('onClick') public onClick? = new EventEmitter();
   @Input('typeOfButton') public typeOfButton?: string;
+  @Input('faClass') public faClass?: string;
+  @Output('onClick') public onClick? = new EventEmitter();
 
   handleClick(event: Event): void {
     this.onClick.emit(event);
