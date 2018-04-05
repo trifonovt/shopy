@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CartComponent } from './cart/cart.component';
 
+// Additional libraries
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { CartComponent } from './cart/cart.component';
     FormsModule,
     HttpModule,
     SharedComponentsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

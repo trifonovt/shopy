@@ -5,17 +5,15 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   templateUrl: './app-button.component.html',
   styleUrls: ['./app-button.component.scss']
 })
-export class AppButtonComponent implements OnInit {
-  @Input('title') title = '';
-  @Input('type') type = 'button';
-  @Input('className') className = '';
-  @Input('disabled') disabled = false;
-  @Output('onClick') onClick = new EventEmitter();
+export class AppButtonComponent {
 
-  constructor() { }
+  @Input('label') public label?: string;
+  @Input('type') public type? = 'button';
+  @Input('className') public className? = '';
+  @Input('disabled') public disabled? = false;
+  @Output('onClick') public onClick? = new EventEmitter();
+  @Input('typeOfButton') public typeOfButton?: string;
 
-  ngOnInit() {
-  }
   handleClick(event: Event): void {
     this.onClick.emit(event);
   }
