@@ -1,13 +1,15 @@
 <header>
-  <ul>
-    <li>
-      <h2>Shopy</h2>
-    </li>
-    <li>
-      <app-button [title]="CLick" (onClick)="gotoCart()"></app-button>
-    </li>
-    <li>
-      valericfbg@gmail.com
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li>
+        <a href routerLink='/'>Shopy</a>
+      </li>
+      <li>
+      </li>
+      <li>
+        <app-button label="{{CLick}}" (onClick)="gotoCart()" typeOfButton="icon"></app-button>
+        valericfbg@gmail.com
+      </li>
+    </ul>
+  </nav>
 </header>
