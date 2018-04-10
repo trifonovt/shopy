@@ -1,8 +1,8 @@
-<section>
+<section *mobxAutorun>
   <aside>
     left
   </aside>
   <main>
-    <app-product-list [products]="products"></app-product-list>
+    <app-product-list [products]="productStore.products"></app-product-list>
   </main>
 </section>
