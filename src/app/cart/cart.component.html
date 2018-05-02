@@ -1,3 +1,11 @@
-<p>
-  cart works!
-</p>
+<div class="container-product-item">
+  <div class="img-wrapper">
+    <img src="{{currentProduct.imgUrl}}" alt="{{currentProduct.title}}">
+  </div>
+  <div class="container-product-info">
+    <h4>{{currentProduct.title}}</h4>
+    <p>{{currentProduct.description}}</p>
+    <p>Price: {{currentProduct.price | currency: "BGN": 2}}</p>
+    <p>Category: {{currentProduct.category}}</p>
+  </div>
+</div>

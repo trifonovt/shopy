@@ -12,4 +12,7 @@ export class ProductItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  private add(product): void {
+    localStorage.setItem('currentProduct', JSON.stringify(product));
+  }
 }
