@@ -19,10 +19,6 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 // Services
 import { Product } from './stores/product.store';
 
-// Additional libraries
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +32,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     SharedComponentsModule,
     AppRoutingModule,
     MobxAngularModule
-    // AngularFontAwesomeModule
   ],
   providers: [Product],
   bootstrap: [AppComponent]
