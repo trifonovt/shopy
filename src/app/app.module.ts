@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 // 3Party Modules
 import { MobxAngularModule } from 'mobx-angular';
@@ -35,8 +37,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HttpModule,
     SharedComponentsModule,
     AppRoutingModule,
-    MobxAngularModule
-    // AngularFontAwesomeModule
+    MobxAngularModule,
+    // AngularFontAwesomeModule,
+    NgbModule.forRoot()
   ],
   providers: [Product],
   bootstrap: [AppComponent]
