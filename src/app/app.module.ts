@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 // 3Party Modules
 import { MobxAngularModule } from 'mobx-angular';
@@ -19,6 +21,7 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 // Services
 import { Product } from './stores/product.store';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,8 @@ import { Product } from './stores/product.store';
     HttpModule,
     SharedComponentsModule,
     AppRoutingModule,
-    MobxAngularModule
+    MobxAngularModule,
+    NgbModule.forRoot()
   ],
   providers: [Product],
   bootstrap: [AppComponent]
