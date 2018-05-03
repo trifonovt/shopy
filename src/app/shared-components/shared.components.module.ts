@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 import { ShopyHeaderComponent } from './shopy-header/shopy-header.component';
 import { AppButtonComponent } from './app-button/app-button.component';
@@ -12,7 +13,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   imports: [
     CommonModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    RouterModule
   ],
   exports: [
     ShopyHeaderComponent,

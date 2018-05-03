@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-shopy-header',
   templateUrl: './shopy-header.component.html',
-  styleUrls: ['./shopy-header.component.scss']
+  styleUrls: ['./shopy-header.component.scss'],
 })
 export class ShopyHeaderComponent implements OnInit {
 
