@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 @NgModule({
   imports: [
@@ -20,13 +21,15 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ShopyHeaderComponent,
     AppButtonComponent,
     ProductItemComponent,
-    ProductListComponent
+    ProductListComponent,
+    SearchBoxComponent
   ],
   declarations: [
     ShopyHeaderComponent,
     AppButtonComponent,
     ProductItemComponent,
-    ProductListComponent
+    ProductListComponent,
+    SearchBoxComponent
   ]
 })
 export class SharedComponentsModule { }
