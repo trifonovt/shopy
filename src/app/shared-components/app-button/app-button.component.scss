@@ -4,11 +4,17 @@
     cursor: pointer;
   }
 }
-.shopy-button {
+
+.icon-text-btn {
+  ::ng-deep fa {
+    i{
+      position: relative;
+      right: -0.5rem;
+      top: 1.7rem;
+      color: white;
+    }
+  }
   button {
-    width: 130px;
-    height: 42px;
-    background: $blue;
-    color: #fff;
+    padding-left: 2rem;
   }
 }

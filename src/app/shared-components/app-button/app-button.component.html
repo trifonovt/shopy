@@ -4,11 +4,13 @@
 
 <ng-container [ngSwitch]="typeOfButton">
     <ng-container *ngSwitchCase="'iconText'">
-        <i class="{{faClass}}"></i>
+      <div class="icon-text-btn">
+        <fa name="{{faClass}}" animation="{{faAnimation}}"></fa>
         <button [type]="type" class="app-button {{className}}" [disabled]="disabled" (click)="handleClick($event)">{{label}}</button>
+      </div>
     </ng-container>
     <ng-container *ngSwitchCase="'icon'">
-      <fa name="shopping-cart" (click)="handleClick($event)"></fa>
+      <fa name="{{faClass}}" (click)="handleClick($event)"></fa>
     </ng-container>
     <ng-container *ngSwitchCase="'button'">
       <button [type]="type" class="app-button {{className}}" [disabled]="disabled" (click)="handleClick($event)">{{label}}</button>
