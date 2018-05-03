@@ -6,9 +6,13 @@ import { AppButtonComponent } from './app-button/app-button.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+// Additional libraries
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AngularFontAwesomeModule
   ],
   exports: [
     ShopyHeaderComponent,
@@ -20,7 +24,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     ShopyHeaderComponent,
     AppButtonComponent,
     ProductItemComponent,
-    ProductListComponent,
+    ProductListComponent
   ]
 })
 export class SharedComponentsModule { }

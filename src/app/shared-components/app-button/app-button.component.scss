@@ -1,8 +1,14 @@
 @import '../../../styles/variables.scss';
-
-button {
-  width: 130px;
-  height: 42px;
-  background: $blue;
-  color: #fff;
+::ng-deep fa {
+  i {
+    cursor: pointer;
+  }
+}
+.shopy-button {
+  button {
+    width: 130px;
+    height: 42px;
+    background: $blue;
+    color: #fff;
+  }
 }

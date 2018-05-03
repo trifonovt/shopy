@@ -14,6 +14,9 @@ header {
         color: aliceblue;
         flex-grow: 1;
         text-align: center;
+        a {
+          color: aliceblue;
+        }
       }
       li:last-child {
         flex-grow: 0.1;
