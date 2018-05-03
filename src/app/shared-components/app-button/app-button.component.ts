@@ -13,6 +13,7 @@ export class AppButtonComponent {
   @Input('disabled') public disabled? = false;
   @Input('typeOfButton') public typeOfButton?: string;
   @Input('faClass') public faClass?: string;
+  @Input('faAnimation') public faAnimation?: string;
   @Output('onClick') public onClick? = new EventEmitter();
 
   handleClick(event: Event): void {
