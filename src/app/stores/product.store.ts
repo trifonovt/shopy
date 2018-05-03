@@ -21,6 +21,12 @@ export class Product {
         "price": 20,
         "category": "toys",
         "imgUrl": "https://cdn.shopify.com/s/files/1/0977/1572/products/Number_Ele.jpg?v=1463348724"
+    }, {
+        "title": "Code monkey",
+        "description": "Writes the code for you.",
+        "price": 1233,
+        "category": "automation",
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2015_Mercedes-Benz_C_200_%28W_205%29_sedan_%282015-07-03%29_01.jpg/1200px-2015_Mercedes-Benz_C_200_%28W_205%29_sedan_%282015-07-03%29_01.jpg"
     }];
     @observable count = 1;
 
