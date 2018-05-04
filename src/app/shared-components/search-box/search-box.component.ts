@@ -18,31 +18,13 @@ import { interval } from 'rxjs/observable/interval';
   styleUrls: ['./search-box.component.scss']
 })
 export class SearchBoxComponent implements OnInit {
-  @Input() products;
-  @Output() filterProducts: EventEmitter<any> = new EventEmitter<any>();
+  @Input() action: Function;
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
     Observable.fromEvent(this.el.nativeElement, 'keyup')
       .map((e: any) => e.target.value)
-      .filter((text: string) => text.length >= 1)
       .debounceTime(250)
-      .switchMap(query => this.search(query).pipe(catchError))
-      .subscribe(
-        (results) => {
-          this.filterProducts.emit(results);
-        }
-      );
-  }
-
-  search(text: string) {
-    return Observable.create((obs) => {
-      const res = this.products.filter((p: any) => {
-        return p.title.indexOf(text) > -1 || p.description.indexOf(text) > -1 || p.category.indexOf(text) > -1;
-      });
-
-
-      obs.next(res)
-    });
+      .subscribe(text => this.action(text));
   }
 }

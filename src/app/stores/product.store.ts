@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
-import { observable, autorun } from 'mobx';
+import { observable, autorun, action, computed } from 'mobx';
+
+const contains = (o, t) => o.toLowerCase().indexOf(t) > -1;
 
 @Injectable()
 export class Product {
+    @observable text: string = '';
     @observable products: Object[] = [{
         "title": "Snowboard",
         "description": "In a really good condition.",
@@ -29,6 +32,15 @@ export class Product {
         "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2015_Mercedes-Benz_C_200_%28W_205%29_sedan_%282015-07-03%29_01.jpg/1200px-2015_Mercedes-Benz_C_200_%28W_205%29_sedan_%282015-07-03%29_01.jpg"
     }];
     @observable count = 1;
+
+    @action addProduct = product => this.products.push(product);
+    @action setQueryString = text => this.text = text;
+
+    @computed get filteredProducts() {
+        return this.products.filter((p: any) => contains(p.title, this.text) ||
+            contains(p.description, this.text) ||
+            contains(p.category, this.text));
+    }
 
     constructor() {
        

@@ -14,7 +14,7 @@ import { SharedComponentsModule } from 'app/shared-components/shared.components.
 
 // Components
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
 import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
 
