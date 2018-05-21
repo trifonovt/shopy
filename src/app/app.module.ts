@@ -20,13 +20,15 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 
 // Services
 import { Product } from './stores/product.store';
+import { AddEditProductComponent } from './pages/add-edit-product/add-edit-product.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
-    ProductListPageComponent
+    ProductListPageComponent,
+    AddEditProductComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ export class ProductListPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.productStore.fetchProducts();
   }
 
 }
