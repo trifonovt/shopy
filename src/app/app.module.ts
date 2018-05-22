@@ -1,10 +1,10 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { HttpClientModule } from '@angular/common/http';
 
 // 3Party Modules
 import { MobxAngularModule } from 'mobx-angular';
@@ -20,7 +20,7 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 
 // Services
 import { Product } from './stores/product.store';
-
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -32,12 +32,18 @@ import { Product } from './stores/product.store';
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     SharedComponentsModule,
     AppRoutingModule,
     MobxAngularModule,
     NgbModule.forRoot()
   ],
-  providers: [Product],
+  providers: [Product, ProductService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  static injector: Injector;
+    constructor(injector: Injector) {
+        AppModule.injector = injector;
+    }
+ }
