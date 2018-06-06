@@ -35,8 +35,9 @@ module.exports = function (config) {
               : ['progress'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     autoWatch: false,
-    browsers: ['Chrome']
+    browsers: ['Chrome'],
+    singleRun: true
   });
 };
