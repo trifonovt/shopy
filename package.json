@@ -1,6 +1,6 @@
 {
-  "name": "reddit-clone",
-  "version": "0.0.0",
+  "name": "shopy",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
