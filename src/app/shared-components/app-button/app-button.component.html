@@ -1,0 +1,18 @@
+
+
+
+
+<ng-container [ngSwitch]="typeOfButton">
+    <ng-container *ngSwitchCase="'iconText'">
+      <div class="icon-text-btn">
+        <fa name="{{faClass}}" animation="{{faAnimation}}"></fa>
+        <button [type]="type" class="app-button {{className}}" [disabled]="disabled" (click)="handleClick($event)">{{label}}</button>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'icon'">
+      <fa name="{{faClass}}" (click)="handleClick($event)"></fa>
+    </ng-container>
+    <ng-container *ngSwitchCase="'button'">
+      <button [type]="type" class="app-button {{className}}" [disabled]="disabled" (click)="handleClick($event)">{{label}}</button>
+    </ng-container>
+</ng-container>

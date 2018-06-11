@@ -1,0 +1,14 @@
+.container-product-item {
+    padding: 15px 0;
+    border: 1px solid #d9d9da;
+    .img-wrapper {
+        text-align: center;
+        img {
+            max-width: 100%;
+            height: 100px;
+        }
+    }
+    .container-product-info {
+      justify-items: center;
+    }
+}

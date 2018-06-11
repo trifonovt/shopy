@@ -1,0 +1,26 @@
+header {
+  nav {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    background-color: #6495ed;
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: space-around;
+      li {
+        color: aliceblue;
+        flex-grow: 1;
+        text-align: center;
+        a {
+          color: aliceblue;
+        }
+      }
+      li:last-child {
+        flex-grow: 0.1;
+      }
+    }
+  }
+}
