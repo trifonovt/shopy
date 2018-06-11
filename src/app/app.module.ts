@@ -2,9 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { XHRBackend, HttpModule } from '@angular/http';
 
 // 3Party Modules
 import { MobxAngularModule } from 'mobx-angular';
@@ -19,8 +19,16 @@ import { CartComponent } from './cart/cart.component';
 import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
 
 // Services
-import { Product } from './stores/product.store';
-import { ProductService } from './services/product.service';
+import { Product as FakeProduct } from './stores/product.store';
+import { Product } from './models/product';
+import { ProductService } from './services/products/product.service';
+import { BaseService } from './services/http/base.service';
+import { HttpService } from './services/http/http.service';
+import { HelperService } from './services/http/helper.service';
+import { ErrorHandlerService } from './services/http/error-handler.service';
+
+//Models
+
 
 @NgModule({
   declarations: [
@@ -31,14 +39,21 @@ import { ProductService } from './services/product.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     HttpClientModule,
+    HttpModule,
     SharedComponentsModule,
     AppRoutingModule,
     MobxAngularModule,
     NgbModule.forRoot()
   ],
-  providers: [Product, ProductService],
+  providers: [
+    ProductService,
+    BaseService,
+    HttpService,
+    HelperService,
+    ErrorHandlerService,
+    FakeProduct
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
