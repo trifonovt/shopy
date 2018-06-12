@@ -12,9 +12,28 @@ export class ProductService {
   constructor(public http: BaseService, public helperService: HelperService) {
 
   }
+
+  getProduct(id) {
+    return this.http.get(`${appApiResources.products}/${id}`)
+    .map((res: IProduct) => {
+      return res;
+    })
+    .catch((error: Response) => Observable.throw(error))
+    .finally(() => {
+    });
+  }
+
+  getProducts() {
+    return this.http.get(appApiResources.products)
+    .map((res: IProduct) => {
+      return res;
+    })
+    .catch((error: Response) => Observable.throw(error))
+    .finally(() => {
+    });
+  }
+
   post(product: IProduct): Observable<IProduct> {
-    // Remove the service dependency from the object
-    delete product.service;
     return this.http.post(appApiResources.products, product)
     .map((res: IProduct) => {
       return res;
@@ -24,15 +43,23 @@ export class ProductService {
     });
   }
 
-  get() {
-    return this.http.get(appApiResources.products)
+  update(id, data) {
+    return this.http.put(`${appApiResources.products}/${id}`, data)
     .map((res: IProduct) => {
-      debugger
       return res;
     })
     .catch((error: Response) => Observable.throw(error))
     .finally(() => {
-      debugger
+    });
+  }
+
+  delete(id, data) {
+    return this.http.delete(`${appApiResources.products}/${id}`, data)
+    .map((res: IProduct) => {
+      return res;
+    })
+    .catch((error: Response) => Observable.throw(error))
+    .finally(() => {
     });
   }
 }

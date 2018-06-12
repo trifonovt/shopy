@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Product as FakeStore } from '../../stores/product.store';
-import { Product } from '../../models/product';
+import { ProductService } from '../../services/products/product.service';
 
 @Component({
   selector: 'app-product-list-page',
@@ -9,15 +9,19 @@ import { Product } from '../../models/product';
   styleUrls: ['./product-list-page.component.scss']
 })
 export class ProductListPageComponent implements OnInit {
-  constructor(private productStore: FakeStore) {
-
+  private products = [
+    { id: 1, name: 'Jack', age: 23},
+    { id: 1, name: 'Jack', age: 23},
+    { id: 1, name: 'Jack', age: 23},
+  ];
+  constructor(private productStore: FakeStore, private productService: ProductService) {
+    // this.productService.getProducts().subscribe((products) => {
+    //   this.products = products.json();
+    //   debugger
+    // });
   }
 
   ngOnInit() {
-    debugger
-    const product = new Product(10, 'Audi', 'Cars', 'Nice car', 5000, '');
-    product.get();
-    product.save();
 
   }
 

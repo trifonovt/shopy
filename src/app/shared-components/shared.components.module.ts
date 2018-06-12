@@ -10,12 +10,14 @@ import { ProductListComponent } from './product-list/product-list.component';
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   imports: [
     CommonModule,
     AngularFontAwesomeModule,
-    RouterModule
+    RouterModule,
+    DataViewModule
   ],
   exports: [
     ShopyHeaderComponent,

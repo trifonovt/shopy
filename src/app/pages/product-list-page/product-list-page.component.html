@@ -7,7 +7,20 @@
       <div class="mb-3">
         <app-search-box [action]="productStore.setQueryString"></app-search-box>
       </div>
-      <app-product-list [products]="productStore.filteredProducts"></app-product-list>
+      <!-- <app-product-list [products]="products"></app-product-list> -->
+      <p-dataView [value]="products" [rows]="10">
+        <ng-template let-product pTemplate="listItem">
+          <div class="ui-dataview-header ui-g-12 ui-md-3">
+            {{product.id}}
+          </div>
+          <div class="ui-g-12 ui-md-3">
+            {{product.name}}
+          </div>
+          <div class="ui-g-12 ui-md-3">
+            {{product.age}}
+          </div>
+        </ng-template>
+    </p-dataView>
     </main>
   </div>
 </section>

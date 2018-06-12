@@ -25,7 +25,6 @@ export class HttpService extends Http {
 
 
   request(url: string | Request, options?: RequestOptions): Observable<Response> {
-    debugger
     if (typeof url === 'string') {
       if (!options) {
         // let's make an option object
@@ -52,7 +51,6 @@ export class HttpService extends Http {
     }
   }
   catchAuthError(self: HttpService) {
-    debugger
     // we have to pass HttpService's own instance here as `self`
    return (res: Response) => {
     if (res.status === 401 || res.status === 403) {

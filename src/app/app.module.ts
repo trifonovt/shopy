@@ -20,12 +20,13 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 
 // Services
 import { Product as FakeProduct } from './stores/product.store';
-import { Product } from './models/product';
+// import { Product } from './models/product';
 import { ProductService } from './services/products/product.service';
 import { BaseService } from './services/http/base.service';
 import { HttpService } from './services/http/http.service';
 import { HelperService } from './services/http/helper.service';
 import { ErrorHandlerService } from './services/http/error-handler.service';
+import { DataViewModule } from 'primeng/dataview';
 
 //Models
 
@@ -44,6 +45,7 @@ import { ErrorHandlerService } from './services/http/error-handler.service';
     SharedComponentsModule,
     AppRoutingModule,
     MobxAngularModule,
+    DataViewModule,
     NgbModule.forRoot()
   ],
   providers: [

@@ -15,12 +15,10 @@ export class BaseService {
   constructor(public http: HttpService, public errorHandler: ErrorHandlerService,
     public helperService: HelperService) {
   }
-  get(url) {
+  get(url, id?) {
     // Helper service to start ng2-slim-loading-bar progress bar
     // this.helperService.startLoader();
-    debugger
     return this.http.get(url).map((res: Response) => {
-      debugger
       return this.handleResponse(res);
     }).catch((error: Response) => Observable.throw(this.errorHandler.tryParseError(error)))
       .finally(() => {
