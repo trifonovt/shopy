@@ -14,6 +14,7 @@ import {ButtonModule} from 'primeng/button';
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { SInputComponent } from './s-input/s-input.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     ProductItemComponent,
     ProductListComponent,
     SearchBoxComponent,
+    SInputComponent,
     InputTextModule,
     ButtonModule,
     FormsModule,
@@ -41,7 +43,8 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     AppButtonComponent,
     ProductItemComponent,
     ProductListComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    SInputComponent
   ]
 })
 export class SharedComponentsModule { }

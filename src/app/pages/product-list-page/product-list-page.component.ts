@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Product } from "../../stores/product.store";
+import { Product } from '../../stores/product.store';
 
 @Component({
   selector: 'app-product-list-page',
