@@ -29,13 +29,15 @@ import { ErrorHandlerService } from './services/http/error-handler.service';
 import { DataViewModule } from 'primeng/dataview';
 
 //Models
+import { AddEditProductComponent } from './pages/add-edit-product/add-edit-product.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
-    ProductListPageComponent
+    ProductListPageComponent,
+    AddEditProductComponent
   ],
   imports: [
     BrowserModule,

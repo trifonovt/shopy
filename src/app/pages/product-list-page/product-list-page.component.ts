@@ -34,6 +34,7 @@ export class ProductListPageComponent implements OnInit {
     //   debugger
     // });
 
+  this.productStore.fetchProducts();
   }
 
 }

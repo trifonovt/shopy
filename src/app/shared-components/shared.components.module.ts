@@ -1,37 +1,54 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ShopyHeaderComponent } from './shopy-header/shopy-header.component';
 import { AppButtonComponent } from './app-button/app-button.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+import { InputTextModule } from 'primeng/inputtext';
+import { DataViewModule } from 'primeng/dataview';
+import { ButtonModule } from 'primeng/button';
+
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBoxComponent } from './search-box/search-box.component';
-import { DataViewModule } from 'primeng/dataview';
+import { SInputComponent } from './s-input/s-input.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     AngularFontAwesomeModule,
     RouterModule,
-    DataViewModule
+    DataViewModule,
+    InputTextModule,
+    ButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ShopyHeaderComponent,
     AppButtonComponent,
     ProductItemComponent,
     ProductListComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    SInputComponent,
+    InputTextModule,
+    ButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    DataViewModule
   ],
   declarations: [
     ShopyHeaderComponent,
     AppButtonComponent,
     ProductItemComponent,
     ProductListComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    SInputComponent
   ]
 })
 export class SharedComponentsModule { }

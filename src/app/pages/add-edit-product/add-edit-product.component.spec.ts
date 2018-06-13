@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchBoxComponent } from './search-box.component';
+import { AddEditProductComponent } from './add-edit-product.component';
 
-describe('SearchBoxComponent', () => {
-  let component: SearchBoxComponent;
-  let fixture: ComponentFixture<SearchBoxComponent>;
+describe('AddEditProductComponent', () => {
+  let component: AddEditProductComponent;
+  let fixture: ComponentFixture<AddEditProductComponent>;
 
   // beforeEach(async(() => {
   //   TestBed.configureTestingModule({
-  //     declarations: [ SearchBoxComponent ]
+  //     declarations: [ AddEditProductComponent ]
   //   })
   //   .compileComponents();
   // }));
 
   // beforeEach(() => {
-  //   fixture = TestBed.createComponent(SearchBoxComponent);
+  //   fixture = TestBed.createComponent(AddEditProductComponent);
   //   component = fixture.componentInstance;
   //   fixture.detectChanges();
   // });

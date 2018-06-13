@@ -1,0 +1,10 @@
+<form class="p-4" (submit)="onSubmit()" [formGroup]="addEditProductForm">
+  <fieldset>
+    <legend>Product</legend>
+    <s-input label="Title" name="title" [form]="addEditProductForm"></s-input>
+    <s-input label="Description" name="description" [form]="addEditProductForm"></s-input>
+    <s-input label="Price" type="number" name="price" [form]="addEditProductForm"></s-input>
+    <s-input label="Category" name="category" [form]="addEditProductForm"></s-input>
+    <p-button type="submit" label="Save" class="mt-4"></p-button>
+  </fieldset>
+</form>

@@ -1,0 +1,9 @@
+<span class="ui-float-label mt-4">
+  <input id="float-input" type="{{type}}" pInputText [formControl]="form.controls[name]">
+  <label for="float-input">{{label}}</label>
+</span>
+<div class="text-danger p-1" *ngIf="form.controls[name].invalid && (form.controls[name].dirty || form.controls[name].touched)">
+  <div *ngIf="form.get(name).hasError('required')">{{label}} is required.</div>
+  <div *ngIf="form.get(name).hasError('maxlength') || form.get(name).hasError('minlength')">{{label}} length is not valid.</div>
+  <div *ngIf="form.get(name).hasError('min') || form.get(name).hasError('max')">{{label}} out of range.</div>
+</div>

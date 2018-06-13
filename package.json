@@ -1,6 +1,6 @@
 {
-  "name": "reddit-clone",
-  "version": "0.0.0",
+  "name": "shopy",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -51,7 +51,7 @@
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
-    "karma-chrome-launcher": "^2.0.0",
+    "karma-phantomjs-launcher": "latest",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
