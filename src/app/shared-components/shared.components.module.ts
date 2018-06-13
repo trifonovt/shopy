@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import {SliderModule} from 'primeng/slider';
 
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -24,7 +25,8 @@ import { SInputComponent } from './s-input/s-input.component';
     InputTextModule,
     ButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SliderModule
   ],
   exports: [
     ShopyHeaderComponent,
@@ -36,7 +38,8 @@ import { SInputComponent } from './s-input/s-input.component';
     InputTextModule,
     ButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SliderModule
   ],
   declarations: [
     ShopyHeaderComponent,

@@ -21,6 +21,7 @@ import { ProductListPageComponent } from './pages/product-list-page/product-list
 // Services
 import { Product } from './stores/product.store';
 import { AddEditProductComponent } from './pages/add-edit-product/add-edit-product.component';
+import { ProductFilterComponent } from './pages/product-list-page/components/product-filter/product-filter.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AddEditProductComponent } from './pages/add-edit-product/add-edit-produ
     AppComponent,
     CartComponent,
     ProductListPageComponent,
-    AddEditProductComponent
+    AddEditProductComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,

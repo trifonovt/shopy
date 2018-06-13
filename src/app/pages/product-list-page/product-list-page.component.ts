@@ -16,4 +16,8 @@ export class ProductListPageComponent implements OnInit {
     this.productStore.fetchProducts();
   }
 
+  public onPriceSliderEnd(value): void {
+    this.productStore.setPriceFilter(value);
+  }
+
 }
