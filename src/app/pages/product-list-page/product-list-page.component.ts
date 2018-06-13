@@ -11,17 +11,28 @@ import { ProductService } from '../../services/products/product.service';
 export class ProductListPageComponent implements OnInit {
   private products = [
     { id: 1, name: 'Jack', age: 23},
-    { id: 1, name: 'Jack', age: 23},
-    { id: 1, name: 'Jack', age: 23},
+    { id: 2, name: 'Jack', age: 56},
+    { id: 3, name: 'Jack', age: 46},
+    { id: 4, name: 'Jack', age: 23},
+    { id: 5, name: 'Jack', age: 56},
+    { id: 6, name: 'Jack', age: 46},
+    { id: 7, name: 'Jack', age: 23},
+    { id: 8, name: 'Jack', age: 56},
+    { id: 9, name: 'Jack', age: 46},
+    { id: 10, name: 'Jack', age: 23},
+    { id: 11, name: 'Jack', age: 56},
+    { id: 12, name: 'Jack', age: 46},
   ];
   constructor(private productStore: FakeStore, private productService: ProductService) {
-    // this.productService.getProducts().subscribe((products) => {
-    //   this.products = products.json();
-    //   debugger
-    // });
   }
 
   ngOnInit() {
+    // this.productService.getProducts().subscribe((products) => {
+    //   this.products = products;
+    //   console.log(products);
+
+    //   debugger
+    // });
 
   }
 

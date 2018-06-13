@@ -34,6 +34,7 @@
     "jquery": "3.2.1",
     "mobx": "3.3.1",
     "mobx-angular": ">=2",
+    "primeicons": "^1.0.0-beta.7",
     "primeng": "^5.2.4",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
