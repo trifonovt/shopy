@@ -1,8 +1,8 @@
-<p-dataView [value]="data" [paginator]="true" [rows]="10" [sortField]="sortField" [sortOrder]="sortOrder">
+<p-dataView [value]="data" [paginator]="paginator" [rows]="rows" [sortField]="sortField" [sortOrder]="sortOrder">
   <p-header>
     <ng-content select=".theader"></ng-content>
-    <!-- <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By"
-    (onChange)="onSortChange($event)" [autoWidth]="false" [style]="{'min-width':'15em'}"></p-dropdown> -->
+    <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By"
+    (onChange)="onSortChange($event)" [autoWidth]="true" [style]="{'min-width':'15em'}"></p-dropdown>
   </p-header>
   <ng-template let-data pTemplate="listItem">
     <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">

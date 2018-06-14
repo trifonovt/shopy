@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ShopyHeaderComponent } from './shopy-header/shopy-header.component';
 import { AppButtonComponent } from './app-button/app-button.component';
@@ -11,6 +12,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/primeng';
 
 // Additional libraries
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -28,7 +30,10 @@ import { AppTableComponent } from './app-table/app-table.component';
     InputTextModule,
     ButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DropdownModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule
   ],
   exports: [
     ShopyHeaderComponent,
@@ -42,7 +47,10 @@ import { AppTableComponent } from './app-table/app-table.component';
     FormsModule,
     ReactiveFormsModule,
     DataViewModule,
-    AppTableComponent
+    AppTableComponent,
+    DropdownModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     ShopyHeaderComponent,

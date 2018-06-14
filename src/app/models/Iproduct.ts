@@ -1,4 +1,3 @@
-import { ProductService } from "../services/products/product.service";
 
 export interface IProduct {
   id?: number;
@@ -7,9 +6,8 @@ export interface IProduct {
   description?: string;
   price?: number;
   imgUrl?: string;
-  save();
+  // save();
   // delete();
   // update();
   // get();
-  service?: ProductService;
 }

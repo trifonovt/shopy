@@ -1,10 +1,18 @@
-<app-table [data]="products" >
-  <div class="theader">
-    <div class="mb-3">
-      Search products:
+<div>
+  <app-table [data]="products"
+             [sortOptions]="sortOptions"
+             [paginator]="true"
+             [rows]="3"
+             (onSortChanged)="onSortChange($event)"
+             [sortField]="sortField"
+             [sortOrder]="sortOrder">
+    <div class="theader">
+      <div class="mb-3">
+        Search products:
+      </div>
+      <div class="mb-3">
+        <!-- <app-search-box [action]="productStore.setQueryString"></app-search-box> -->
+      </div>
     </div>
-    <div class="mb-3">
-      <app-search-box [action]="productStore.setQueryString"></app-search-box>
-    </div>
-  </div>
-</app-table>
+  </app-table>
+</div>
