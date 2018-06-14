@@ -4,7 +4,7 @@ import { NgModule, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import { XHRBackend, HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 // 3Party Modules
 import { MobxAngularModule } from 'mobx-angular';
@@ -28,6 +28,7 @@ import { ErrorHandlerService } from './services/http/error-handler.service';
 
 //Models
 import { AddEditProductComponent } from './pages/add-edit-product/add-edit-product.component';
+import { ProductListComponent } from './pages/product-list-page/components/product-list/product-list.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AddEditProductComponent } from './pages/add-edit-product/add-edit-produ
     AppComponent,
     CartComponent,
     ProductListPageComponent,
-    AddEditProductComponent
+    AddEditProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

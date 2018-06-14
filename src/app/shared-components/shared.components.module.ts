@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { SInputComponent } from './s-input/s-input.component';
+import { AppTableComponent } from './app-table/app-table.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SInputComponent } from './s-input/s-input.component';
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    DataViewModule
+    DataViewModule,
+    AppTableComponent
   ],
   declarations: [
     ShopyHeaderComponent,
@@ -48,7 +50,8 @@ import { SInputComponent } from './s-input/s-input.component';
     ProductItemComponent,
     ProductListComponent,
     SearchBoxComponent,
-    SInputComponent
+    SInputComponent,
+    AppTableComponent
   ]
 })
 export class SharedComponentsModule { }

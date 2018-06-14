@@ -13,7 +13,7 @@ export class ProductService {
 
   }
 
-  getProduct(id) {
+  getProduct(id: number) {
     return this.http.get(`${appApiResources.products}/${id}`)
     .map((res: IProduct) => {
       return res;
@@ -33,7 +33,7 @@ export class ProductService {
     });
   }
 
-  post(product: IProduct): Observable<IProduct> {
+  create(product: IProduct): Observable<IProduct> {
     return this.http.post(appApiResources.products, product)
     .map((res: IProduct) => {
       return res;

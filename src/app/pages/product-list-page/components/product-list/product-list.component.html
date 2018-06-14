@@ -1,0 +1,10 @@
+<app-table [data]="products" >
+  <div class="theader">
+    <div class="mb-3">
+      Search products:
+    </div>
+    <div class="mb-3">
+      <app-search-box [action]="productStore.setQueryString"></app-search-box>
+    </div>
+  </div>
+</app-table>
