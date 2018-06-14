@@ -1,0 +1,4 @@
+<div>
+  <label class="pb-3">Price: ({{initPrice}})</label>
+  <p-slider [(ngModel)]="initPrice" animate="true" max="{{max}}" (onChange)="onPriceSlideEndHandler($event)"></p-slider>
+</div>

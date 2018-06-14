@@ -29,6 +29,7 @@ import { ErrorHandlerService } from './services/http/error-handler.service';
 //Models
 import { AddEditProductComponent } from './pages/add-edit-product/add-edit-product.component';
 import { ProductListComponent } from './pages/product-list-page/components/product-list/product-list.component';
+import { ProductFilterComponent } from './pages/product-list-page/components/product-filter/product-filter.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProductListComponent } from './pages/product-list-page/components/produ
     CartComponent,
     ProductListPageComponent,
     AddEditProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,

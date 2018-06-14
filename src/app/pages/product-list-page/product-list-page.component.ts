@@ -10,4 +10,8 @@ export class ProductListPageComponent {
   constructor() {
   }
 
+  public onPriceSliderEnd(value): void {
+    this.productStore.setPriceFilter(value);
+  }
+
 }

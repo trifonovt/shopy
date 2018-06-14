@@ -8,9 +8,11 @@ export class Product {
     @observable text: string = '';
     @observable products: Object[];
     @observable count = 1;
+    @observable price = 10000;
 
     @action addProduct = product => this.products.push(product);
     @action setQueryString = text => this.text = text;
+    @action setPriceFilter = price => this.price = price;
     @action fetchProducts = () => {
         this.products = [{
             "title": "Snowboard",
@@ -40,9 +42,10 @@ export class Product {
     }
 
     @computed get filteredProducts() {
-        return this.products.filter((p: any) => contains(p.title, this.text) ||
+        return this.products.filter((p: any) => 
+            (contains(p.title, this.text) ||
             contains(p.description, this.text) ||
-            contains(p.category, this.text));
+            contains(p.category, this.text)) && p.price <= this.price);
     }
 
     constructor() {
