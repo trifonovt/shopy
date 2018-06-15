@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { observable, autorun, action, computed } from 'mobx';
+import { ProductService } from '../services/products/product.service';
 
 const contains = (o, t) => o.toLowerCase().indexOf(t) > -1;
 
@@ -10,11 +11,18 @@ export class Product {
     @observable count = 1;
     @observable price = 10000;
 
+    constructor(private productService: ProductService) {
+
+    }
+
     @action addProduct = product => this.products.push(product);
     @action setQueryString = text => this.text = text;
     @action setPriceFilter = price => this.price = price;
     @action fetchProducts = () => {
-        this.products = [{
+      // this.productService.getProducts().subscribe((products) => {
+      //   this.products = products;
+      // });
+      this.products = [{
             "title": "Snowboard",
             "description": "In a really good condition.",
             "price": 110,
@@ -42,13 +50,11 @@ export class Product {
     }
 
     @computed get filteredProducts() {
-        return this.products.filter((p: any) => 
+        return this.products.filter((p: any) =>
             (contains(p.title, this.text) ||
             contains(p.description, this.text) ||
             contains(p.category, this.text)) && p.price <= this.price);
     }
 
-    constructor() {
-       
-    }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ProductService } from '../../../../services/products/product.service';
 import { SelectItem } from 'primeng/primeng';
+import { Product } from '../../../../stores/product.store';
 
 @Component({
   selector: 'product-list',
@@ -26,7 +27,7 @@ export class ProductListComponent implements OnInit {
     { id: 11, title: 'BMW I880', description: 'super car with 1200hp', price: 56, category: 'Super Cars'},
     { id: 12, title: 'BMW I880', description: 'super car with 1200hp', price: 46, category: 'Super Cars'},
   ];
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, productStore: Product) { }
 
   ngOnInit() {
     this.sortOptions = [
