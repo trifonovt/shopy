@@ -8,7 +8,7 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 export class ProductFilterComponent implements OnInit {
   @Output() priceSlideEnd: EventEmitter<any>;
   public min = 0;
-  public max = 10000;
+  public max = 100000;
   @Input() initPrice;
 
   constructor() {
